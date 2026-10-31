@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { usePost } from "@/features/posts/posts.hooks";
-import { gutter } from "@/lib/Layout";
+import { gutter } from "@/lib/layout";
 
 const toParagraphs = (body: string) =>
   body
