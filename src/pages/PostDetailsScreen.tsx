@@ -8,6 +8,8 @@ import CommentList from "@/features/comments/components/CommentList";
 import { usePost } from "@/features/posts/posts.hooks";
 import { gutter } from "@/lib/layout";
 
+
+
 const toParagraphs = (body: string) =>
   body
     .split(/\n\s*\n/)
@@ -95,12 +97,14 @@ const PostDetailsScreen = () => {
               Author {data.userId}
             </span>
           )}
+          
+         
           <FormattedDate value={data.createdAt} />
         </div>
         {paragraphs.length > 0 && (
           <div
             className={`mt-9 max-w-[34rem] font-reading text-[1.0625rem] leading-[1.75] text-foreground/90 ${railEdge}`}
-          >
+          > const year = data.createdAt.slice(0, 4);
             {paragraphs.map((paragraph, index) => (
               <p key={index} className="mt-6 first:mt-0">
                 {paragraph}
